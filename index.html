@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Dương Tùng</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .header .title {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 16px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: white;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 36px;
+        }
+
+        .section:last-child {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #3498db;
+            border-radius: 50%;
+        }
+
+        .experience-item, .education-item, .project-item {
+            margin-bottom: 24px;
+            padding-left: 20px;
+            border-left: 3px solid #3498db;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+
+        .item-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .item-company {
+            color: #3498db;
+            font-weight: 500;
+        }
+
+        .item-date {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .item-description {
+            color: #555;
+            margin-top: 8px;
+        }
+
+        .item-description ul {
+            margin-top: 8px;
+            padding-left: 20px;
+        }
+
+        .item-description li {
+            margin-bottom: 4px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+        }
+
+        .skill-tag {
+            background: #e8f4fd;
+            color: #2c3e50;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .languages {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .language-item {
+            background: #f8f9fa;
+            padding: 10px 18px;
+            border-radius: 6px;
+            border: 1px solid #e0e0e0;
+        }
+
+        .language-name {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .language-level {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        .summary {
+            font-size: 1.05rem;
+            color: #444;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        @media print {
+            body { background: white; }
+            .container { box-shadow: none; margin: 0; max-width: 100%; }
+            .header { background: #2c3e50 !important; -webkit-print-color-adjust: exact; }
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 0; border-radius: 0; }
+            .header { padding: 30px 20px; }
+            .header h1 { font-size: 2rem; }
+            .content { padding: 24px 20px; }
+            .contact-info { flex-direction: column; gap: 8px; }
+            .item-header { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Dương Tùng</h1>
+            <div class="title">Lập Trình Viên Full Stack</div>
+            <div class="contact-info">
+                <a href="mailto:sinmun915@gmail.com">📧 sinmun915@gmail.com</a>
+                <a href="tel:+84911861345">📱 +84911861345</a>
+                <a href="https://linkedin.com/in/tungduong" target="_blank">💼 LinkedIn</a>
+                <a href="https://github.com/tungduong" target="_blank">💻 GitHub</a>
+                <span>📍 Hà Nội, Việt Nam</span>
+            </div>
+        </header>
+
+        <main class="content">
+            <section class="section">
+                <h2 class="section-title">Tóm Tắt</h2>
+                <p class="summary">
+                    Lập trình viên Full Stack đam mê với hơn 5 năm kinh nghiệm xây dựng các ứng dụng web có khả năng mở rộng.
+                    Thạo hệ sinh thái JavaScript/TypeScript hiện đại (React, Node.js, Next.js) và công nghệ đám mây
+                    (AWS, Docker, CI/CD). Ủng hộ mạnh mẽ code sạch, testing và trải nghiệm lập trình viên.
+                    Có kinh nghiệm dẫn dắt nhóm nhỏ, hướng dẫn lập trình viên junior và giao付 sản phẩm
+                    từ khái niệm đến sản xuất.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Kinh Nghiệm Làm Việc</h2>
+
+                <article class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Senior Full Stack Developer</div>
+                            <div class="item-company">TechCorp Việt Nam</div>
+                        </div>
+                        <div class="item-date">2022 – Nay</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Dẫn dắt việc di chuyển từ monolith legacy sang kiến trúc microservices sử dụng Next.js và Node.js, cải thiện tần suất triển khai 40%</li>
+                            <li>Thiết kế và triển khai RESTful APIs và GraphQL endpoints phục vụ 100K+ người dùng hoạt động hàng ngày</li>
+                            <li>Xây dựng CI/CD pipelines với GitHub Actions, Docker, và AWS ECS giảm thời gian deploy từ 30ph xuống 5ph</li>
+                            <li>Hướng dẫn 3 lập trình viên junior, thực hiện code review và pair programming</li>
+                            <li>Triển khai TypeScript strict mode và văn hóa testing (Jest, React Testing Library, Cypress) đạt 85% coverage</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Full Stack Developer</div>
+                            <div class="item-company">StartupXYZ</div>
+                        </div>
+                        <div class="item-date">2020 – 2022</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Xây dựng ứng dụng web responsive sử dụng React, Redux, và Tailwind CSS</li>
+                            <li>Phát triển backend services với Node.js/Express và PostgreSQL, triển khai authentication, real-time features (Socket.io)</li>
+                            <li>Tích hợp API bên thứ ba (Stripe, SendGrid, Google Maps) cho thanh toán, thông báo, và dịch vụ vị trí</li>
+                            <li>Tối ưu truy vấn database và triển khai Redis caching, giảm thời gian phản hồi API 60%</li>
+                            <li>Hợp tác chặt chẽ với team UX/UI để triển khai giao diện pixel-perfect</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="experience-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Junior Frontend Developer</div>
+                            <div class="item-company">Digital Agency</div>
+                        </div>
+                        <div class="item-date">2018 – 2020</div>
+                    </div>
+                    <div class="item-description">
+                        <ul>
+                            <li>Phát triển và bảo trì 10+ website khách hàng sử dụng Vue.js, Nuxt.js, và SCSS</li>
+                            <li>Triển khai responsive design theo hướng mobile-first và tiêu chuẩn accessibility (WCAG 2.1)</li>
+                            <li>Làm việc mật thiết với team backend để tích hợp REST APIs và GraphQL</li>
+                            <li>Tham gia các buổi agile ceremonies (daily standups, sprint planning, retrospectives)</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Giáo Dục</h2>
+
+                <article class="education-item">
+                    <div class="item-header">
+                        <div>
+                            <div class="item-title">Cử Nhân Khoa Học Máy Tính</div>
+                            <div class="item-company">Đại Học Công Nghệ Thông Tin (UIT)</div>
+                        </div>
+                        <div class="item-date">2014 – 2018</div>
+                    </div>
+                    <div class="item-description">
+                        Tốt nghiệp loại Khá (GPA: 3.6/4.0). Các môn học liên quan: Cấu Trúc Dữ Liệu, Thuật Toán, Hệ Quản Trị Cơ Sở Dữ Liệu, Mạng Máy Tính, Kỹ Thuật Phần Mềm.
+                    </div>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Kỹ Năng Kỹ Thuật</h2>
+                <div class="skills-grid">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">TypeScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Next.js</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Express</span>
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Redis</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">AWS</span>
+                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">REST API</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">Jest</span>
+                    <span class="skill-tag">Cypress</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Dự Án Đặc Biệt</h2>
+
+                <article class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Nền Tảng Thương Mại Điện Tử</div>
+                        <div class="item-date">2023</div>
+                    </div>
+                    <div class="item-description">
+                        Giải pháp e-commerce full-stack với Next.js 14, Prisma, PostgreSQL, tích hợp Stripe.
+                        Tính năng: xác thực, giỏ hàng, thanh toán, quản lý đơn hàng, admin dashboard.
+                        <br><a href="https://github.com/tungduong/ecommerce" target="_blank" style="color: #3498db;">github.com/tungduong/ecommerce</a>
+                    </div>
+                </article>
+
+                <article class="project-item">
+                    <div class="item-header">
+                        <div class="item-title">Ứng Dụng Quản Lý Nhiệm Vụ</div>
+                        <div class="item-date">2022</div>
+                    </div>
+                    <div class="item-description">
+                        Bảng tác vụ cộng tác real-time với React, Node.js, Socket.io, và MongoDB.
+                        Hỗ trợ teams, projects, kanban boards, và notifications.
+                        <br><a href="https://github.com/tungduong/taskapp" target="_blank" style="color: #3498db;">github.com/tungduong/taskapp</a>
+                    </div>
+                </article>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Ngoại Ngữ</h2>
+                <div class="languages">
+                    <div class="language-item">
+                        <div class="language-name">Tiếng Việt</div>
+                        <div class="language-level">Ngôn ngữ mẹ đẻ</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Tiếng Anh</div>
+                        <div class="language-level">Chuyên nghiệp (IELTS 7.0)</div>
+                    </div>
+                    <div class="language-item">
+                        <div class="language-name">Tiếng Nhật</div>
+                        <div class="language-level">Sơ cấp (N5)</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>   
